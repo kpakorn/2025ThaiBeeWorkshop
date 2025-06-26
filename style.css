@@ -1,22 +1,42 @@
 /* style.css */
 
+/* Reset default spacing */
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Header and banner */
 header {
   text-align: center;
-  padding: 1rem;
+  padding: 0;
 }
 
+#site-banner {
+  display: block;           /* remove inline gaps */
+  width: 100%;              /* full viewport width */
+  max-width: 1200px;        /* limit to a reasonable size */
+  max-height: 200px;        /* cap the height */
+  object-fit: cover;        /* crop/scale to fill */
+  margin: 0 auto 1rem;      /* center & spacing below */
+}
+
+/* Page title */
+h1 {
+  margin: 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+/* Main layout: sidebar + content */
 .container {
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
+  padding: 0 1rem;
 }
 
+/* Sidebar styling */
 #sidebar {
   width: 180px;
   background: #f5f5f5;
@@ -27,6 +47,11 @@ header {
 #sidebar .term {
   padding: 0.5rem;
   cursor: pointer;
+  border-radius: 4px;
+}
+
+#sidebar .term:hover {
+  background: #e0e0e0;
 }
 
 #sidebar .active {
@@ -34,6 +59,7 @@ header {
   font-weight: bold;
 }
 
+/* Content area */
 main {
   flex: 1;
   padding: 1rem;
@@ -45,8 +71,10 @@ main {
   padding: 0.5rem;
   margin-bottom: 1rem;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
+/* Term card */
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -54,10 +82,13 @@ main {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .card img {
-  width: 40%;        /* takes up 40% of the card’s width */
+  width: 40%;             /* take up 40% of card width */
   height: auto;
   margin-left: auto;
   border-radius: 4px;
@@ -66,4 +97,27 @@ main {
 .card a {
   margin-top: 0.5rem;
   display: inline-block;
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  #sidebar {
+    width: 100%;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card img {
+    width: 80%;
+    margin: 1rem auto 0;
+  }
 }
