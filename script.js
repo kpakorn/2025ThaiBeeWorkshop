@@ -1,5 +1,13 @@
 let terms = [];
 
+/* Banner at top of page */
+#site-banner {
+  width: 100%;      /* spans full width */
+  height: auto;     /* keeps image proportions */
+  display: block;   /* removes inline spacing */
+  margin-bottom: 1rem; /* space before title */
+}
+
 // 1) Load CSV with new headers
 Papa.parse('data/dictionary.csv', {
   download: true,
