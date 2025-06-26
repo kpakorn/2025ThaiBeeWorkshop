@@ -1,47 +1,38 @@
-let terms = [];
+// script.js
 
-/* Banner at top of page */
-#site-banner {
-  display: block;        /* removes inline gaps */
-  width: 100%;           /* full‐width */
-  max-width: 1200px;     /* never wider than this */
-  max-height: 200px;     /* cap the height */
-  object-fit: cover;     /* crop/scale rather than squash */
-  margin: 0 auto 1rem;   /* center & space below */
-}
-
+// Confirm script loaded
 console.log("🚀 script.js loaded");
 
-Papa.parse('data/dictionary.csv', {
-  download: true,
-  header: true,
-  complete: ({ data }) => {
-    console.log("📑 CSV parsed, rows:", data.length, data);
-    const rows = data.filter(r => r.Terms);
-    console.log("📝 Filtered terms:", rows.length, rows.map(r=>r.Terms));
-    terms = rows;
-    renderSidebar(terms);
-    if (terms.length) showTerm(terms[0].Terms);
-  },
-  error: err => console.error("❌ PapaParse error:", err)
-});
+// Global array for terms\let terms = [];
 
-// Load CSV with new headers
+// Parse CSV and initialize
 Papa.parse('data/dictionary.csv', {
   download: true,
   header: true,
-  complete: ({ data }) => {
-    // Filter out any empty rows
-    terms = data.filter(r => r.Terms);
-    renderSidebar(terms);
-    // Show first term by default if exists
-    if (terms.length > 0) {
-      showTerm(terms[0].Terms);
+  complete: ({ data, errors }) => {
+    if (errors.length) {
+      console.error("❌ CSV parse errors:", errors);
     }
+    console.log("📑 Parsed CSV rows:", data.length);
+    
+    // Filter out rows without a valid Terms field
+    terms = data.filter(r => r.Terms && r.Terms.trim() !== "");
+    console.log("📝 Valid terms:", terms.map(r => r.Terms));
+    
+    // Render the sidebar and show first term if available
+    renderSidebar(terms);
+    if (terms.length) {
+      showTerm(terms[0].Terms);
+    } else {
+      document.getElementById('card-container').innerHTML = '<p>No terms available.</p>';
+    }
+  },
+  error: err => {
+    console.error("❌ PapaParse error:", err);
   }
 });
 
-// Render the sidebar list of terms
+// Render sidebar navigation list
 function renderSidebar(list) {
   const nav = document.getElementById('sidebar');
   nav.innerHTML = '';
@@ -55,46 +46,43 @@ function renderSidebar(list) {
 }
 
 // Display a single term card in the main area
-function showTerm(word) {
-  // Highlight the active term in the sidebar
+function showTerm(termName) {
+  // Highlight the active term
   document.querySelectorAll('#sidebar .term').forEach(el => {
-    el.classList.toggle('active', el.textContent === word);
+    el.classList.toggle('active', el.textContent === termName);
   });
 
-  const record = terms.find(r => r.Terms === word);
+  const record = terms.find(r => r.Terms === termName);
   const container = document.getElementById('card-container');
-
+  
   if (!record) {
-    container.innerHTML = '<p>No data found.</p>';
+    container.innerHTML = '<p>Term not found.</p>';
     return;
   }
 
-  // Build optional figure link and image
-  const figureLink = record.Related_Figures
-    ? `<a href="images/${record.Related_Figures}" target="_blank">View Figure</a>`
-    : '';
-  const figureImage = record.Related_Figures
-    ? `<img src="images/${record.Related_Figures}" alt="${record.Terms} figure">`
-    : '';
+  // Optional figure handling
+  const fig = record.Related_Figures && record.Related_Figures.trim() !== "" ? record.Related_Figures.trim() : null;
+  const figLink = fig ? `<p><a href="images/${fig}" target="_blank">View Figure</a></p>` : '';
+  const figImg = fig ? `<img src="images/${fig}" alt="${record.Terms} figure">` : '';
 
-  // Populate the card container
+  // Build and inject the card markup
   container.innerHTML = `
     <div class="card">
       <div>
         <h2>${record.Terms}</h2>
         <p><strong>Type:</strong> ${record.Type}</p>
         <p>${record.Descriptions}</p>
-        ${figureLink}
-      </div>
-      ${figureImage}
-    </div>
+        ${figLink}
+      </\/div>
+      ${figImg}
+    <\/div>
   `;
 }
 
-// Search functionality: filters sidebar and shows first match
+// Search functionality: filter sidebar & show first match
 document.getElementById('search').addEventListener('input', e => {
   const q = e.target.value.toLowerCase();
-  const filtered = terms.filter(r => 
+  const filtered = terms.filter(r =>
     r.Terms.toLowerCase().includes(q) ||
     r.Type.toLowerCase().includes(q) ||
     r.Descriptions.toLowerCase().includes(q)
@@ -106,4 +94,3 @@ document.getElementById('search').addEventListener('input', e => {
     document.getElementById('card-container').innerHTML = '<p>No results found.</p>';
   }
 });
-
