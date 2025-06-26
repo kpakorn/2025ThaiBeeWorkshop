@@ -9,7 +9,7 @@
 <body>
   <header>
     <!-- Banner image -->
-    <img src="images/banner.jpg" alt="Bee Workshop Banner" id="site-banner">
+    <img id="site-banner" src="images/banner.jpg" alt="Bee Workshop Banner">
     <!-- Site title -->
     <h1>Thai Bee Workshop Dictionary</h1>
   </header>
@@ -19,14 +19,14 @@
     <!-- Sidebar: list of terms -->
     <nav id="sidebar"></nav>
 
-    <!-- Content: search input + card display -->
+    <!-- Content area: search + term card -->
     <main>
       <input id="search" type="text" placeholder="Search...">
       <div id="card-container"></div>
     </main>
   </div>
 
-  <!-- CSV parser and site script -->
+  <!-- CSV parser and dictionary script -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="script.js"></script>
 </body>
