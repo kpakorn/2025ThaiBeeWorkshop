@@ -2,12 +2,14 @@ let terms = [];
 
 /* Banner at top of page */
 #site-banner {
-  width: 100%;
-  height: 150px;          /* exact height */
-  object-fit: cover;
-  display: block;
-  margin-bottom: 1rem;
+  display: block;        /* removes inline gaps */
+  width: 100%;           /* full‐width */
+  max-width: 1200px;     /* never wider than this */
+  max-height: 200px;     /* cap the height */
+  object-fit: cover;     /* crop/scale rather than squash */
+  margin: 0 auto 1rem;   /* center & space below */
 }
+
 
 
 
