@@ -16,7 +16,7 @@ header {
 #site-banner {
   display: block;           /* remove inline gaps */
   width: 100%;              /* full viewport width */
-  max-width: 1200px;        /* limit to a reasonable size */
+  height: 100%;              /* full viewport height */
   max-height: 200px;        /* cap the height */
   object-fit: cover;        /* crop/scale to fill */
   margin: 0 auto 1rem;      /* center & spacing below */
