@@ -14,12 +14,12 @@ header {
 }
 
 #site-banner {
-  display: block;           /* remove inline gaps */
-  width: 100%;              /* full viewport width */
-  height: 100%;              /* full viewport height */
-  max-height: 300px;        /* cap the height */
-  object-fit: cover;        /* crop/scale to fill */
-  margin: 0 auto 1rem;      /* center & spacing below */
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 200px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
 }
 
 /* Page title */
@@ -76,41 +76,45 @@ main {
 
 /* Term card */
 .card {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
   background: white;
-  max-width: 800px;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .card img {
-  width: 40%;             /* take up 40% of card width */
+  width: 40%;
   height: auto;
   margin-left: auto;
   border-radius: 4px;
 }
 
 .card a {
-  margin-top: 0.5rem;
   display: inline-block;
-  color: #1a0dab;
+  margin-top: 0.5rem;
   text-decoration: none;
+  color: #1a0dab;
 }
 
 .card a:hover {
   text-decoration: underline;
 }
 
-/* Responsive adjustments for small screens */
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
   }
+  main {
+    order: 1;
+  }
   #sidebar {
+    order: 2;
     width: 100%;
   }
   .card {
@@ -121,3 +125,4 @@ main {
     margin: 1rem auto 0;
   }
 }
+
