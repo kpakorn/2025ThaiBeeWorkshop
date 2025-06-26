@@ -1,10 +1,15 @@
 let terms = [];
+
+// 1) Load CSV with new headers
 Papa.parse('data/dictionary.csv', {
-  download: true, header: true,
+  download: true,
+  header: true,
   complete: ({ data }) => {
-    terms = data.filter(r => r.wording);
+    // Filter out any empty rows
+    terms = data.filter(r => r.Terms);
     renderSidebar(terms);
-    showTerm(terms[0].wording);
+    // Show first term by default
+    showTerm(terms[0].Terms);
   }
 });
 
@@ -13,37 +18,51 @@ function renderSidebar(list) {
   nav.innerHTML = '';
   list.forEach(r => {
     const div = document.createElement('div');
-    div.textContent = r.wording;
+    div.textContent = r.Terms;
     div.className = 'term';
-    div.onclick = () => showTerm(r.wording);
+    div.onclick = () => showTerm(r.Terms);
     nav.appendChild(div);
   });
 }
 
 function showTerm(word) {
+  // Highlight in sidebar
   document.querySelectorAll('#sidebar .term')
     .forEach(el => el.classList.toggle('active', el.textContent === word));
-  const record = terms.find(r => r.wording === word);
-  document.getElementById('card-container').innerHTML = `
+
+  const record = terms.find(r => r.Terms === word);
+  const container = document.getElementById('card-container');
+
+  // Build card HTML, showing Type and handling possible blank image
+  container.innerHTML = `
     <div class="card">
       <div>
-        <h2>${record.wording}</h2>
-        <p>${record.definition}</p>
-        <a href="images/${record.reference}.png" target="_blank">
-          Figure ${record.reference}
-        </a>
+        <h2>${record.Terms}</h2>
+        <p><strong>Type:</strong> ${record.Type}</p>
+        <p>${record.Descriptions}</p>
+        ${record.Related_Figures
+          ? `<a href="images/${record.Related_Figures}" target="_blank">
+               View Figure
+             </a>`
+          : ``}
       </div>
-      <img src="images/${record.reference}.png" alt="Figure ${record.reference}">
-    </div>`;
+      ${record.Related_Figures
+        ? `<img src="images/${record.Related_Figures}"
+                alt="${record.Terms} figure">`
+        : ``}
+    </div>
+  `;
 }
 
+// 4) Search now also looks in Descriptions (optional: include Type)
 document.getElementById('search')
   .addEventListener('input', e => {
     const q = e.target.value.toLowerCase();
     const filtered = terms.filter(r =>
-      r.wording.toLowerCase().includes(q) ||
-      r.definition.toLowerCase().includes(q)
+      r.Terms.toLowerCase().includes(q) ||
+      r.Type.toLowerCase().includes(q) ||
+      r.Descriptions.toLowerCase().includes(q)
     );
     renderSidebar(filtered);
-    if (filtered.length) showTerm(filtered[0].wording);
+    if (filtered.length) showTerm(filtered[0].Terms);
   });
