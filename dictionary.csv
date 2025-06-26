@@ -1,0 +1,276 @@
+﻿Terms,Type,Descriptions,Related_Figures
+anterior,anatomy-direction,ด้านหน้า,1
+posterior,anatomy-direction,ด้านท้าย,1
+median,anatomy-direction,ตรงกลาง,1
+lateral,anatomy-direction,ด้านข้าง,1
+marginal,anatomy-direction,บริเวณขอบ,1
+margin,anatomy-direction,ขอบ,1
+inner,anatomy-direction,ด้านในเมื่อเทียบกับแนวกลางตัว,1
+outer,anatomy-direction,ด้านนอกเมื่อเทียบกับแนวกลางตัว,1
+apical,anatomy-direction,ด้านปลาย,1
+proximal,anatomy-direction,คือ apical,1
+basal,anatomy-direction,ด้านฐาน,1
+distal,anatomy-direction,คือ basal,1
+frontal,anatomy-direction,ด้านหน้าของส่วนหัว (ด้านที่ใบหน้าหัน),1
+parallel,anatomy-direction,ขนานไปกับ,1
+tangent,anatomy-direction,สัมผัสกับ,1
+dorsal,anatomy-direction,ด้านหลัง,1
+ventral,anatomy-direction,ด้านท้อง,1
+dense,anatomy-quantification,หนาแน่น,5
+sparse,anatomy-quantification,ประปราย,5
+fine,anatomy-quantification,ละเอียด (ขนาด),5
+coarse,anatomy-quantification,หยาบ (ขนาด),5
+compact,anatomy-quantification,แน่น,5
+loose,anatomy-quantification,หลวม,5
+prominent,anatomy-quantification,โดดเด่น,5
+minute,anatomy-quantification,"เล็ก, ด้อย",5
+clump,anatomy-quantification,เกาะกลุ่ม,5
+confuse,anatomy-quantification,แยกกันยาก รูปร่างไม่ชัดเจน ความหมายคล้าย irregular,5
+irregular,anatomy-quantification,แยกกันยาก รูปร่างไม่ชัดเจน ความหมายคล้าย confuse,5
+uniform,anatomy-quantification,เรียงตัวสม่ำเสมอ,5
+prosoma,structures-main,ร่างกายส่วนหน้า (ส่วนหัว),1
+mesosoma,structures-main,ร่างกายส่วนกลาง (ส่วนที่เห็นภายนอกเป็นส่วนอก),1
+metasoma,structures-main,ร่างกายส่วนท้าย (ส่วนที่เห็นภายนอกเป็นส่วนท้อง),1
+clavate,structures-shape,รูปร่างคล้ายกระบอง ปลายป่องออกเล็กน้อย,4
+geniculate,structures-shape,เป็นข้อหักศอก,4
+angulate,structures-shape,ยื่นทำมุม,4
+spiculate,structures-shape,ยื่นปลายติ่งแหลมเล็ก,4
+truncate,structures-shape,ปลายตัด คล้ายตัดเป็นตอไม้,4
+rotund,structures-shape,อ้วนกลม อวบ,4
+robust,structures-shape,สันทัด กำยำ,4
+slim,structures-shape,ผอม เพรียวบาง,4
+punctures,surfaces-modification,รู หลุม (รอยบุ๋มเป็นรู ๆ กระจายบนพื้นผิว),4
+convex,surfaces-modification,นูน โป่งนูนออก,4
+concave,surfaces-modification,เว้า เว้าลึกลง,4
+glabrous,surfaces-modification,ไม่มีขนปกคลุม,4
+pubescens,surfaces-modification,มีขนปกคลุม,4
+shiny,surfaces-modification,พื้นผิวแวววาว,4
+polished,surfaces-modification,พื้ื้นผิวเรียบ,4
+dull,surfaces-modification,พื้นผิวหม่น ไม่วาวแสง,4
+imbricate,surfaces-modification,ย่น,4
+coriaceous,surfaces-modification,พื้นผิวมีการสลักลวดลายขนาดเล็กมาก ๆ คล้ายผิวหนังมนุษย์,4
+tessellate,surfaces-modification,พื้นผิวมีการสลักลวดลายขนาดเล็กมาก ๆ เป็นแผ่นรอยบางอย่างเรียงกันซ้ำๆ คล้ายหนังกิ้งก่า,4
+shagreened,surfaces-modification,พื้นผิวขรุขระเป็นปุ่มขนาดเล็กคล้ายหนังปลากระเบน,n
+decussate,surfaces-modification,รูปร่างเป็นรอยกากบาท,4
+rugose,surfaces-modification,มีรอยยับ รอยย่นแบบผิวกระเพาะอาหาร (rugae),4
+areolate,surfaces-modification,มีรอยย่นเป็นช่องปิดบางอย่าง,4
+striate,surfaces-modification,มีรอยย่นริ้วเป็นแนว ความหมายคล้าย carinulate,4
+carinulate,surfaces-modification,มีรอยย่นริ้วเป็นแนว ความหมายคล้าย striate,4
+microsculptures,surfaces-modification,พื้นผิวมีการสลักลวดลายขนาดเล็กมาก ๆ,4
+process,surfaces-modification,ส่วนที่ยื่นออก,4
+projection,surfaces-modification,ส่วนที่ยื่นออก,4
+spine,surfaces-modification,พื้นผิวที่มีการยื่นออกเป็นหนามแหลม,4
+carinated,surfaces-modification,พื้นผิวที่มีการยกตัวเป็นสัน,4
+lamellated,surfaces-modification,พื้นผิวที่มีการยกตัวหรือยื่นออกเป็นสันบางหรือแผ่นบาง,4
+fovea,surfaces-modification,รอยบุ๋มขนาดใหญ่,4
+impressed,surfaces-modification,ยกตัวขึ้น,4
+depressed,surfaces-modification,ยุบตัวลง,4
+sulcus,surfaces-modification,ร่อง,4
+suture,surfaces-modification,ร่องระหว่างแผ่นโครงสร้างที่เชื่อมกัน ขยับจากกันไม่ได้,4
+transparent,coloration,โปร่งใส (แสงผ่านได้ทั้งหมด หรือแทบทั้งหมด),2
+translucent,coloration,โปร่งแสง (แสงผ่านได้บ้าง หรือเล็กน้อย),2
+opaque,coloration,ทึบแสง ขุ่นมัว,2
+acute,surfaces-margin,แหลม,3
+subacute,surfaces-margin,แหลมเล็กน้อย แหลมปลายมน,3
+obtuse,surfaces-margin,ป้าน ทู่,3
+round,surfaces-margin,โค้งกลม,3
+entire,surfaces-margin,เรียบ,3
+lobed,surfaces-margin,เป็นหยัก เป็นพู,3
+lobate,surfaces-margin,เป็นหยัก เป็นพู,3
+crenate,surfaces-margin,โค้งเป็นหยักมน,3
+crenulate,surfaces-margin,โค้งเป็นหยักมนละเอียด,3
+emarginate,surfaces-margin,มีส่วนเว้าเข้า,3
+dentate,surfaces-margin,แหลมเป็นหยักซี่ฟันคล้ายใบเลื่อย,3
+serrate,surfaces-margin,แหลมเป็นหยักซี่ฟันคล้ายใบเลื่อยละเอียด,3
+undulate,surfaces-margin,โค้งเป็นลอนคลื่น,3
+sinuate,surfaces-margin,โค้งเป็นลอนคลื่นละเอียด,3
+branching,surfaces-pilosity,มีการแตกแขนง,6
+erected,surfaces-pilosity,ชูขึ้น ยกตัวขึ้น,6
+appressed,surfaces-pilosity,กดราบไปกับพื้นผิว,6
+plumose,surfaces-pilosity,ขนที่แตกแขนงละเอียดเป็นพู่นุ่มคล้ายขนนก,6
+spinuate,surfaces-pilosity,ขนที่แตกแขนงเล็กน้อย แต่ละแขนงยื่นยาวออกเป็นหนามชัดเจน,6
+pectinate,surfaces-pilosity,ขนที่แตกแขนง โดยแต่ละแขนงยื่นยาวออกชัดเจนเรียงคล้ายซี่หวี,6
+simple,surfaces-pilosity,ขนปกติที่ไม่มีการแตกแขนง ปลายเรียวแหลม,6
+blunt,surfaces-pilosity,ขนปกติที่ไม่มีการแตกแขนง ปลายตัด,6
+scopal hair,surfaces-pilosity,ขนของแผงขนเก็บเรณู,6
+hooked,surfaces-pilosity,ส่วนปลายมีการโค้งคล้ายตะขอ,6
+spatulated,surfaces-pilosity,ส่วนปลายมีการแผ่ป้านคล้ายปลายช้อน,6
+bristle,surfaces-pilosity,ขนที่มีความหนา,6
+scaled,surfaces-pilosity,ขนที่หนา สั้น รูปร่างคล้ายเกล็ด,6
+fringe,surfaces-pilosity,แผงขน แนวแผงขน,6
+tomentum,surfaces-pilosity,แถบขนยาวนุ่ม,6
+fascia,surfaces-pilosity,แถบขนสั้นที่เรียงตัวกัน มีการกดราบไปกับพื้นผิวคล้ายมีพังผืด (fascia) เคลือบ,6
+pale,coloration,ขาวนวล ขาวซีด,2
+fulvous,coloration,โทนน้ำตาลเหลือง โทนน้ำตาลซีด,2
+flavous,coloration,เหลือง,
+fuscous,coloration,โทนเข้ม โทนสีเทาเข้ม,2
+piceous,coloration,โทนสีดำ โทนสีหมึก,2
+testaceous,coloration,โทนสีน้ำตาล น้ำตาลคล้ายเปลือกไข่สีเข้ม,2
+ochraceous,coloration,โทนสีเหลืองจาง เหลืองส้ม เหลืองแบบดินเหลือง (ochre),2
+rufous,coloration,โทนสีแดงอมน้ำตาล,2
+violaceous,coloration,โทนสีม่วงคล้ายมะเขือม่วง,2
+ferrugineus,coloration,โทนสีสนิม,2
+opalescent,coloration,สีขาวนวลแต่เหลือบแสงคล้ายโอปอล,2
+metallic,coloration,วาวแบบโลหะ,2
+emerald,coloration,นิยมใช้แทนสีแบบ เขียววาวโลหะ (metallic green),2
+neon / electric blue,coloration,ฟ้า-น้ำเงินสว่าง,2
+dusky,coloration,โทนหม่น,
+dark,coloration,โทนมืด,
+faded,coloration,จาง,
+intermixed,coloration,ผสม (ปรากฎร่วมกัน),2
+pigment,coloration,เม็ดสี,
+tanning,coloration,เรี่มมีการสะสมเม็ดสี กระบวนการสะสมเม็ดสี,
+sclerotization,coloration,มีการสะสมเม็ดสีและทำให้โครงร่างแข็งภายนอกแข็งแรงขึ้น,
+decoloration,coloration,สีจางลง,
+discoloration,coloration,สีเปลี่ยนไป,
+head,structures-prosoma,หัว,
+labrum,structures-mouthparts,แผ่นริมฝีปากบน,
+mandible,structures-mouthparts,กราม (ส่วนของกรามบน),
+mandibular teeth,structures-mouthparts,ฟัน ปรากฎที่ส่วนปลายของกราม,
+bidentate,structures-mouthparts,มีฟันสองซี่,
+tridentate,structures-mouthparts,มีฟันสามซี่,
+apical tooth,structures-mouthparts,ซี่ฟันนอกสุด เป็นซี่ที่อยู่ล่างสุดของกราม,
+preapical tooth,structures-mouthparts,ซี่ฟันรอง เป็นซี่ที่อยู่ก่อนซี่ล่างสุดของกราม,
+cutting edge,structures-mouthparts,ส่วนของกราม (mandible): สันตัด มักพบในผึ้งสกุล Megachile,
+acetabulum,structures-mouthparts,ส่วนของกราม (mandible): เบ้าขากรรไกร เป็นมุมฐานด้านบนสุดของกราม,
+condyle,structures-mouthparts,ส่วนของกราม (mandible): ปุ่มขากรรไกร เป็นปุ่มนูนที่อยู่มุมฐานด้านล่างสุดของกราม,
+acetabular groove,structures-mouthparts,ส่วนของกราม (mandible): ร่องเบ้าขากรรไกร ลากจาก acetabulum,
+outer ridge,structures-mouthparts,ส่วนของกราม (mandible): สันขอบนอก มักลากมาจาก acetabulum และอยู่ใต้ acetabulum groove,
+outer groove,structures-mouthparts,ส่วนของกราม (mandible): ร่องขอบนอก จะอยู่ใต้ outer ridge,
+condylar ridge,structures-mouthparts,ส่วนของกราม (mandible): สันปุ่มขากรรไกร,
+condylar groove,structures-mouthparts,ส่วนของกราม (mandible): ร่องปุ่มขากรรไกร จะอยู่ใต้ condylar ridge,
+mouth orifice,structures-mouthparts,ช่องปาก,
+clypeus,structures-prosoma,แผ่นหน้า แผ่นเหนือช่องปาก,
+epistomal suture,structures-prosoma,รอยต่อแผ่น clypeus,
+paraocular area,structures-prosoma,พื้นที่ข้างตาประกอบ,
+paraocular lobe,structures-prosoma,พื้นที่ข้างตาประกอบ ส่วนที่ยื่นลงใกล้แผ่น clypeus,
+supraclypeal area,structures-prosoma,พื้นที่เหนือแผ่น clypeus,
+anterior tentorial pit,structures-prosoma,หลุมยึดกล้ามเนื้อฝั่งหน้า บริเวณ epistomal suture,
+subantennal suture,structures-prosoma,ร่องที่ลากเชื่อมระหว่างช่องหนวดกับแผ่น clypeus,
+antenna socket,structures-prosoma,เบ้าหนวด ปริเวณที่หนวดเชื่อมต่อกับส่วนหัว,
+juxtaantennal carina,structures-prosoma,สันนูนข้างขอบในเบ้าหนวด,
+frons,structures-prosoma,พื้นที่หน้าผาก ระหว่าง suparclypeal area กับ paraocular area,
+vertex,structures-prosoma,พื้นที่บริเวณกระหม่อม อยู่ในบริเวณของ ocelli,
+ocelli,structures-prosoma,ตาเดี่ยว,
+orbit,structures-prosoma,ขอบของตาประกอบ,
+gena,structures-prosoma,แก้ม,
+malar space,structures-prosoma,พื้นที่ระหว่างตาประกอบกับกราม,
+preoccipital area,structures-prosoma,พื้นที่บริเวณขอบหัว,
+preoccipital ridge,structures-prosoma,สันบริเวณขอบหัว,
+occiput,structures-prosoma,ท้ายทอย ด้านหลังของหัว,
+hypostomal area,structures-prosoma,พื้นที้ด้านใต้หัว เป็นแนวด้านข้างช่องปาก,
+antenna,structures-prosoma,หนวด,
+scape,structures-prosoma,ส่วนของหนวด : ปล้องฐานหนวด,
+pedicel,structures-prosoma,ส่วนของหนวด : ข้องอ หรือปล้องรองฐานหนวด,
+flagellum,structures-prosoma,ส่วนของหนวด : ปล้องปลายหนวด เป็นเส้นยาวต่อถัดออกมาจากข้องอ,
+flagellomere,structures-prosoma,"ส่วนของหนวด : ปล้องย่อยของปล้องปลายหนวด เป็นปล้องเทียม (pseudosegment) อาจเรียกเป็นตัวย่อได้เช่น F1, F2, ... นับจากฐานไปจนถึงปลาย",
+labiomaxillary complex,structures-mouthparts,โครงสร้างปากส่วนหนึ่งของผึ้ง เกิดจากการรวมกันระหว่างส่วนของกรามล่าง (maxilla) และส่วนของริมฝีปากล่าง (labium) ได้เป็นโครงสร้างที่ใช้ดูดเลีย,
+cardo,structures-mouthparts,ฐานกรามล่าง,
+stipes,structures-mouthparts,ก้านกรามล่าง ต่อถัดมาจากส่วนฐานกรามบน (cardo),
+galea,structures-mouthparts,แผ่นปลายกรามล่างนอก,
+lacinia,structures-mouthparts,แผ่นปลายกรามล่างใน,
+maxillary palpus,structures-mouthparts,หนวดย่อยของกรามล่าง,
+labial palpus,structures-mouthparts,หนวดย่อยของริมฝีปากล่าง,
+mentum,structures-mouthparts,ฐานริมฝีปากล่าง,
+prementum,structures-mouthparts,แผ่นหน้าฐานริมฝีปากล่าง,
+paraglossa,structures-mouthparts,ส่วนข้างลิ้น,
+glossa,structures-mouthparts,ลิ้น,
+flabellum,structures-mouthparts,ติ่งปลายลิ้น,
+pronotum,structures-mesosoma,ปล้องหน้าสุดของส่วน mesosoma,
+pronotal lobe,structures-mesosoma,ส่วนของ pronotum ที่ยื่นกินพื้นที่เป็นครึ่งวงกลมของมุมด้านข้าง mesosoma,
+omaulus,structures-mesosoma,แนวสันที่แบ่งระหว่างพื้นที่ด้านหน้า กับพื้นที่ด้านข้าง ของแผ่น mesepisternum,
+hypoepimeral area,structures-mesosoma,บริเวณที่อยู่เหนือแผ่น mesepisternum,
+episternal groove,structures-mesosoma,ร่องแนวตั้งบนแผ่น mesepisternum,
+scrobe,structures-mesosoma,ร่องแนวนอนที่แบ่งระหว่างส่วนของ hypoepimeral area และ mesepisternum,
+scrobal groove,structures-mesosoma,หมายถึง scrobe (ร่องแนวนอนที่แบ่งระหว่างส่วนของ hypoepimeral area และ mesepisternum),
+mesepisternum,structures-mesosoma,แผ่นด้านข้างของ mesosoma ที่อยู่ถัดจากส่วน pronotum และอยู่ด้านใต้ scrobe,
+mesepimeron,structures-mesosoma,หมายถึง hypoepimeral area (บริเวณที่อยู่เหนือแผ่น mesepisternum),
+epimeron,structures-mesosoma,หมายถึง hypoepimeral area (บริเวณที่อยู่เหนือแผ่น mesepisternum),
+metepisternum,structures-mesosoma,แผ่นด้านข้างของ mesosoma ที่อยู่ถัดจากส่วน mesepisternum แต่อยู่ก่อนหน้า propodeum,
+scutum,structures-mesosoma,แผ่นใหญ่ด้านบนของส่วน mesosoma,
+mesoscutum,structures-mesosoma,คำเต็มของ scutum,
+scutellum,structures-mesosoma,แผ่นถัดมาด้านหลังจากแผ่น scutum,
+axilla,structures-mesosoma,แผ่นที่อยู่ด้านข้างของแผ่น scutellum,
+tegula,structures-mesosoma,แผ่นปิดเหนือช่องปีก แผ่นปิดปีก,
+notalus,structures-mesosoma,แนวสัน / ร่องกึ่งกลางอก,
+parapsidial line,structures-mesosoma,เส้นหลังอก ปรากฎขนานซ้ายขวากับ notalus,
+metanotum,structures-mesosoma,ปล้องสุดท้ายของส่วน mesosoma ถูกบีบแคบเหลือเป็นพื้นที่ด้านใต้ scutellum และเหนือ propodeum,
+propodeum,structures-mesosoma,แผ่นปล้องอกติดท้อง,
+propodeal triangle,structures-mesosoma,บริเวณสามเหลี่ยมกลับหัวบน propodeum,
+acarinarium,structures-mesosoma,ช่องเก็บไร เป็นบริเวณที่มีการเว้าเข้าในตัวผึ้งเป็นห้องและมีไรอาศัยอยู่ พบในผึ้งบางชนิด,
+spiracle,structures-mesosoma,รูหายใจ,
+stigma,structures-wings,จุดแต้มปีก,
+pterostigma,structures-wings,หมายถึง stigma,
+prestigma,structures-wings,ฐานจุดแต้มปีก,
+forewing,structures-wings,ปีกหน้า,
+hindwing,structures-wings,ปีกหลัง,
+vein,structures-wings,เส้นปีก,
+marginal cell,structures-wings,ห้องที่อยู่ขอบนอกสุดของปีกหน้า,
+submarginal cell,structures-wings,ห้องที่อยู่ใต้ห้องที่อยู่ขอบนอกสุดของปีกหน้า (marginal cell),
+2nd abscissa vein m,structures-wings,เส้นเชื่อมเส้นที่ 2,
+radial cell,structures-wings,ห้องใต้เส้น radial vein,
+cubital cell,structures-wings,ห้องใต้เส้น cubital vein,
+hamuli,structures-wings,ตะขอเกี่ยวปีก ปรากฎบนของหล้าของปีกหลัง ใช้เกี่ยวปีกหน้าและปีกหลังเข้าด้วยกัน,
+vannal lobe,structures-wings,กลีบปีกล่าง,
+jugal lobe,structures-wings,กลีีบปีกท้าย,
+foreleg,structures-legs,ขาหน้า,
+midleg,structures-legs,ขากลาง,
+hindleg,structures-legs,ขาหลัง,
+coxa,structures-legs,ส่วนของขา: โคนขา,
+trochanter,structures-legs,ส่วนของขา: ปล้องก่อนหน้าต้นขา จะอยู่ถัดจากโคนขา,
+femur,structures-legs,ส่วนของขา: ต้นขา,
+tibia,structures-legs,ส่วนของขา: แข้ง,
+tarsus,structures-legs,ส่วนของขา: ปล้องเท้า,
+tarsomere,structures-legs,ส่วนของขา: ปล้องย่อยเท้า,
+basitarsus,structures-legs,ส่วนของขา: ปล้องย่อยเท้าปล้องแรก,
+mediotarsus,structures-legs,ส่วนของขา: ปล้องกลางเท้า,
+distitarsus,structures-legs,ส่วนของขา: ปล้องปลายเท้า,
+tarsal claw,structures-legs,เล็บ,
+arolium,structures-legs,เบาะเท้า,
+empodium,structures-legs,ขนระหว่างเล็บ,
+basitibial plate,structures-legs,ส่วนของขา: สะบ้าเข่า,
+tibial spine,structures-legs,ส่วนของขา: หนามแข้ง,
+tibial spur,structures-legs,ส่วนของขา: เดือยแข้ง,
+antennal cleaner,structures-legs,ส่วนของขา: โครงสร้างทำความสะอาดหนวด มักปรากฎที่ขาหน้า (foreleg),
+penicillus,structures-legs,ขนแปรง,
+keirotrichia,structures-legs,บริเวณแผงขนสั้นที่ปรากฎแยกบนแข้งขาหลังของผึ้งบางชนิด,
+pollen basket,structures-legs,ตะกร้าเก็บเรณู,
+corbicular,structures-legs,หมายถึง pollen basket,
+pollen press,structures-legs,ลิ่มกดเรณู,
+auricle,structures-legs,เบ้ารองลิ่มกดเรณู มีลักษณะคล้ายใบหู,
+rastellum,structures-legs,คราดกวาดเรณู,
+pollen brushes,structures-legs,แปรงเก็บเรณู,
+tergite,structures-metasoma,"แผ่นปล้องท้องด้านบน ใช้เรียกแต่ละแผ่น อาจเรียกเป็นตัวย่อ เช่น T1, T2, ... นับจากส่วนฐานของร่างกายส่วนท้าย (metasoma) ออกมา",
+tergum,structures-metasoma,หมายถึงแผ่นปล้องท้องด้านบน (tergite),
+terga,structures-metasoma,หมายถึงแผ่นปล้องท้องด้านบน (tergite) (plural form ของ tergum),
+sternite,structures-metasoma,"แผ่นปล้องท้องด้านล่าง ใช้เรียกแต่ละแผ่น อาจเรียกเป็นตัวย่อ เช่น S1, S2, ... นับจากส่วนฐานของร่างกายส่วนท้าย (metasoma) ออกมา",
+sternum,structures-metasoma,หมายถึงแผ่นปล้องท้องด้านล่าง (sternite),
+sterna,structures-metasoma,หมายถึงแผ่นปล้องท้องด้านล่าง (sternite) (plural form ของ sternum),
+premarginal line,structures-metasoma,เส้นแนวก่อนถึงขอบของแผ่นปล้องท้อง,
+marginal zone,structures-metasoma,พื้นที่ตั้งแต่เส้นแนวก่อนถึงขอบ (premarginal line) ไปจนถึงขอบของแผ่นปล้องท้อง,
+disc,structures-metasoma,พื้ื้นที่ส่วนกลางแผ่นปล้องท้อง,
+gradulus,structures-metasoma,ร่องปล้องท้อง,
+pygidlal plate,structures-metasoma,แผ่นสามเหลี่ยมปลายท้อง เป็นโครงสร้างพืเศษบนแผ่นปล้องท้องด้านบนแผ่นสุดท้ายผึ้งบางชนิด,
+pygidial fimbriae,structures-metasoma,กระจุกขนที่ปกคลุมข้าง pygidial plate,
+prepygidial fimbriae,structures-metasoma,กระจุกขนที่ปกคลุมเหนือ pygidial plate โดยปรากฎบนแผ่นปล้องท้องด้านบนแผ่นรองสุดท้าย,
+sting apparatus,structures-sting,ชุดอวัยวะเหล็กใน,
+stylus,structures-sting,แท่งเหล็กใน,
+lancet,structures-sting,ใบเลื่อยเหล็กใน,
+barb,structures-sting,เงี่ยงเหล็กใน,
+barbules,structures-sting,เงี่ยงย่อย เช่น เงี่ยงย่อยบนเหล็กใน,
+aedeagus,structures-genitalia,อวัยวะเพศผู้,
+male genitalia,structures-genitalia,อวัยวะเพศผู้,
+gonostylus,structures-genitalia,ก้านอวัยวะเพศ นิยมใช้เรียกส่วน gonoforceps และ gonostylus ที่บางแคบเป็นแท่งเรียวยาว,
+gonoforceps,structures-genitalia,คีมหนีบ เป็นโครงสร้างส่วนปลายที่ถัดมาจากโคนโครงอวัยวะเพศ (gonocoxa),
+gonobase,structures-genitalia,ฐานโครงอวัยวะเพศ,
+vorsella,structures-genitalia,โครงอวัยวะเพศส่วนหนีบด้านใน,
+gonocoxa,structures-genitalia,โคนโครงอวัยวะเพศ,
+penis valve,structures-genitalia,ลิ้นเปิดปิดอวัยวะเพศ,
+spatha,structures-genitalia,ปลอกอวัยวะเพศ,
+attenuated,anatomy-quantification,จางลง บรรเทา,
+tandem,surfaces-modification,ต่อกัน เรียงตามกัน,
+conspicuous,anatomy-quantification,เด่นชัด,
+perpendicular,surfaces-modification,ตั้งฉาก ตั้งตรง,
+augment,anatomy-quantification,การเสริม การเพิ่มพูน,
+diminish,anatomy-quantification,การลดทอน ทำให้ลดลง,
+enamel,coloration,สีขาวแบบสีของฟัน สีของเคลือบฟัน,
