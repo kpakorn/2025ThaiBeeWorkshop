@@ -1,4 +1,4 @@
-
+let terms = [];
 
 /* Banner at top of page */
 #site-banner {
@@ -10,8 +10,21 @@
   margin: 0 auto 1rem;   /* center & space below */
 }
 
+console.log("🚀 script.js loaded");
 
-let terms = [];
+Papa.parse('data/dictionary.csv', {
+  download: true,
+  header: true,
+  complete: ({ data }) => {
+    console.log("📑 CSV parsed, rows:", data.length, data);
+    const rows = data.filter(r => r.Terms);
+    console.log("📝 Filtered terms:", rows.length, rows.map(r=>r.Terms));
+    terms = rows;
+    renderSidebar(terms);
+    if (terms.length) showTerm(terms[0].Terms);
+  },
+  error: err => console.error("❌ PapaParse error:", err)
+});
 
 // Load CSV with new headers
 Papa.parse('data/dictionary.csv', {
