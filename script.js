@@ -2,12 +2,13 @@ let terms = [];
 
 /* Banner at top of page */
 #site-banner {
-  width: 100%;
-  height: 150px;          /* exact height */
-  object-fit: cover;
+  width: 100%;            /* still full-width */
+  max-height: 200px;      /* cap the height */
+  object-fit: cover;      /* crop/scale to fill the box */
   display: block;
   margin-bottom: 1rem;
 }
+
 
 
 // 1) Load CSV with new headers
