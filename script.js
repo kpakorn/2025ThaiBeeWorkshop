@@ -2,11 +2,13 @@ let terms = [];
 
 /* Banner at top of page */
 #site-banner {
-  max-width: 100%;      /* spans full width */
-  height: auto;     /* keeps image proportions */
-  display: block;   /* removes inline spacing */
-  margin-bottom: 1rem; /* space before title */
+  width: 100%;            /* still full-width */
+  max-height: 200px;      /* cap the height */
+  object-fit: cover;      /* crop/scale to fill the box */
+  display: block;
+  margin-bottom: 1rem;
 }
+
 
 // 1) Load CSV with new headers
 Papa.parse('data/dictionary.csv', {
