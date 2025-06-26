@@ -17,7 +17,7 @@ header {
   display: block;           /* remove inline gaps */
   width: 100%;              /* full viewport width */
   height: 100%;              /* full viewport height */
-  max-height: 200px;        /* cap the height */
+  max-height: 300px;        /* cap the height */
   object-fit: cover;        /* crop/scale to fill */
   margin: 0 auto 1rem;      /* center & spacing below */
 }
