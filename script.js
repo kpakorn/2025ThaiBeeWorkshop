@@ -2,7 +2,7 @@ let terms = [];
 
 /* Banner at top of page */
 #site-banner {
-  width: auto;      /* spans full width */
+  max-width: 100%;      /* spans full width */
   height: auto;     /* keeps image proportions */
   display: block;   /* removes inline spacing */
   margin-bottom: 1rem; /* space before title */
