@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thai Bee Workshop Dictionary</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-  <!-- Banner image -->
-  <img src="images/banner.jpg" alt="Bee Workshop Banner" id="site-banner">
-  <!-- Your existing title -->
-  <h1>Bee Workshop Dictionary</h1>
+    <!-- Banner image -->
+    <img src="images/banner.jpg" alt="Bee Workshop Banner" id="site-banner">
+    <!-- Site title -->
+    <h1>Bee Workshop Dictionary</h1>
   </header>
 
+  <!-- Main layout: sidebar + content -->
   <div class="container">
+    <!-- Sidebar: list of terms -->
     <nav id="sidebar"></nav>
+
+    <!-- Content: search input + card display -->
     <main>
-      <input id="search" type="text" placeholder="Search" />
+      <input id="search" type="text" placeholder="Search...">
       <div id="card-container"></div>
     </main>
   </div>
+
+  <!-- CSV parser and site script -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="script.js"></script>
 </body>
