@@ -105,7 +105,6 @@ main {
   margin: 0 auto;
   display: flex;
   align-items: flex-start;   /* align content to the top instead of center */
-  align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
