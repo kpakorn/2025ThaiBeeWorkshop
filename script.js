@@ -1,52 +1,48 @@
 // script.js
 
-// Confirm script loaded
 console.log("🚀 script.js loaded");
-
-// Global array for terms
 let terms = [];
+let sortAZ = false;                              // ← sort toggle state
+const sortBtn = document.getElementById('sort-toggle');
 
-// Load and parse the CSV dictionary
-Papa.parse('data/dictionary.csv', {
-  download: true,
-  header: true,
-  complete: function(results) {
-    // Log any parse errors
-    if (results.errors.length) {
-      console.error("❌ CSV parse errors:", results.errors);
-    }
-    const data = results.data;
-    console.log("📑 Parsed CSV rows:", data.length);
-
-    // Filter out rows without a Terms value
-    terms = data.filter(row => row.Terms && row.Terms.trim() !== "");
-    console.log("📝 Valid terms:", terms.map(r => r.Terms));
-
-    // **Sort terms A→Z by the Terms field**
-    terms.sort((a, b) =>
-      a.Terms.localeCompare(b.Terms, undefined, { sensitivity: 'base' })
-    );
-
-    // Render the sidebar list and show the first term
-    renderSidebar(terms);
-    if (terms.length > 0) {
-      showTerm(terms[0].Terms);
-    } else {
-      document.getElementById('card-container').innerHTML = '<p>No terms available.</p>';
-    }
-  },
-  error: function(err) {
-    console.error("❌ PapaParse error:", err);
-  }
+// 1) Toggle sort on button click
+sortBtn.addEventListener('click', () => {
+  sortAZ = !sortAZ;
+  sortBtn.textContent = sortAZ
+    ? 'Sort A–Z: On'
+    : 'Sort A–Z: Off';
+  sortBtn.classList.toggle('active', sortAZ);
+  // Re-render sidebar with current filter (or all terms)
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const list = q ? filterTerms(q) : terms;
+  renderSidebar(list);
 });
 
-/**
- * Populate the left sidebar with clickable term names
- */
+// 2) Load CSV
+Papa.parse('data/dictionary.csv', {
+  download: true, header: true,
+  complete({ data, errors }) {
+    if (errors.length) console.error("CSV errors:", errors);
+    // filter out blank
+    terms = data.filter(r => r.Terms && r.Terms.trim());
+    renderSidebar(terms);
+    if (terms.length) showTerm(terms[0].Terms);
+  },
+  error: err => console.error("PapaParse error:", err)
+});
+
+// 3) renderSidebar applies sortAZ if needed
 function renderSidebar(list) {
   const sidebar = document.getElementById('sidebar');
-  sidebar.innerHTML = '';
-  list.forEach(item => {
+  // keep the button, clear only the old terms
+  sidebar.querySelectorAll('.term').forEach(el => el.remove());
+
+  // optionally sort
+  const items = sortAZ
+    ? [...list].sort((a,b) => a.Terms.localeCompare(b.Terms, undefined, {sensitivity:'base'}))
+    : list;
+
+  items.forEach(item => {
     const div = document.createElement('div');
     div.textContent = item.Terms;
     div.classList.add('term');
@@ -55,61 +51,47 @@ function renderSidebar(list) {
   });
 }
 
-/**
- * Display a single term's details in the main card area
- */
-function showTerm(termName) {
-  // Highlight active term
-  document.querySelectorAll('#sidebar .term').forEach(el => {
-    el.classList.toggle('active', el.textContent === termName);
-  });
-
-  const record = terms.find(r => r.Terms === termName);
-  const container = document.getElementById('card-container');
-
-  if (!record) {
-    container.innerHTML = '<p>Term not found.</p>';
-    return;
-  }
-
-  // Build HTML for the card
-  let cardHTML = '<div class="card">';
-  cardHTML += '<div>';
-  cardHTML += `<h2>${record.Terms}</h2>`;
-  if (record.Type) {
-    cardHTML += `<p><strong>Type:</strong> ${record.Type}</p>`;
-  }
-  if (record.Descriptions) {
-    cardHTML += `<p>${record.Descriptions}</p>`;
-  }
-  if (record.Related_Figures) {
-    cardHTML += `<p><a href="images/${record.Related_Figures}" target="_blank">View Figure</a></p>`;
-  }
-  cardHTML += '</div>';
-  if (record.Related_Figures) {
-    cardHTML += `<img src="images/${record.Related_Figures}" alt="${record.Terms} figure">`;
-  }
-  cardHTML += '</div>';
-
-  container.innerHTML = cardHTML;
+// helper to filter without duplicating code
+function filterTerms(query) {
+  return terms.filter(r =>
+    r.Terms.toLowerCase().includes(query) ||
+    (r.Type         && r.Type.toLowerCase().includes(query)) ||
+    (r.Descriptions && r.Descriptions.toLowerCase().includes(query))
+  );
 }
 
-/**
- * Filter terms as the user types in the search box
- */
-const searchInput = document.getElementById('search');
-searchInput.addEventListener('input', function(e) {
-  const q = e.target.value.toLowerCase();
-  const filtered = terms.filter(r =>
-    r.Terms.toLowerCase().includes(q) ||
-    (r.Type && r.Type.toLowerCase().includes(q)) ||
-    (r.Descriptions && r.Descriptions.toLowerCase().includes(q))
-  );
-  renderSidebar(filtered);
-  if (filtered.length > 0) {
-    showTerm(filtered[0].Terms);
-  } else {
-    document.getElementById('card-container').innerHTML = '<p>No results found.</p>';
-  }
-});
+// 4) search listener uses filterTerms + renderSidebar + optional sort
+document.getElementById('search')
+  .addEventListener('input', e => {
+    const q = e.target.value.trim().toLowerCase();
+    const filtered = filterTerms(q);
+    renderSidebar(filtered);
+    if (filtered.length) showTerm(filtered[0].Terms);
+    else document.getElementById('card-container')
+               .innerHTML = '<p>No results found.</p>';
+  });
 
+// 5) showTerm unchanged...
+function showTerm(termName) {
+  document.querySelectorAll('#sidebar .term')
+    .forEach(el => el.classList.toggle('active', el.textContent === termName));
+
+  const rec = terms.find(r => r.Terms === termName);
+  const c = document.getElementById('card-container');
+  if (!rec) return c.innerHTML = '<p>Term not found.</p>';
+
+  let html = '<div class="card"><div>';
+  html += `<h2>${rec.Terms}</h2>`;
+  if (rec.Type) html += `<p><strong>Type:</strong> ${rec.Type}</p>`;
+  if (rec.Descriptions) html += `<p>${rec.Descriptions}</p>`;
+  if (rec.Related_Figures) {
+    html += `<p><a href="images/${rec.Related_Figures}" target="_blank">View Figure</a></p>`;
+  }
+  html += '</div>';
+  if (rec.Related_Figures) {
+    html += `<img src="images/${rec.Related_Figures}" alt="${rec.Terms} figure">`;
+  }
+  html += '</div>';
+
+  c.innerHTML = html;
+}
