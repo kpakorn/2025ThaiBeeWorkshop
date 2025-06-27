@@ -32,6 +32,22 @@ header {
   font-weight: bold;
 }
 
+/* Style for the Sort toggle */
+.sort-btn {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+.sort-btn.active {
+  background: #e0e0e0;
+}
+
 #site-banner {
   display: block;
   width: 100%;
