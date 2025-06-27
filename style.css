@@ -24,7 +24,7 @@ header {
 
 .credits p {
   margin: 0.2rem 0;
-  font-size: 0.9rem;       /* slightly smaller than your h1 */
+  font-size: 0.7rem;       /* slightly smaller than your h1 */
   color: #555;             /* soft gray for secondary info */
 }
 
