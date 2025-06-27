@@ -13,6 +13,25 @@ header {
   padding: 0;
 }
 
+/* Credits under the main title */
+.credits {
+  max-width: 1200px;
+  margin: 0.5rem auto 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.credits p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;       /* slightly smaller than your h1 */
+  color: #555;             /* soft gray for secondary info */
+}
+
+.credits strong {
+  font-weight: bold;
+}
+
 #site-banner {
   display: block;
   width: 100%;
