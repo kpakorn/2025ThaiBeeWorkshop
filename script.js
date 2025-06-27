@@ -22,6 +22,11 @@ Papa.parse('data/dictionary.csv', {
     terms = data.filter(row => row.Terms && row.Terms.trim() !== "");
     console.log("📝 Valid terms:", terms.map(r => r.Terms));
 
+    // **Sort terms A→Z by the Terms field**
+    terms.sort((a, b) =>
+      a.Terms.localeCompare(b.Terms, undefined, { sensitivity: 'base' })
+    );
+
     // Render the sidebar list and show the first term
     renderSidebar(terms);
     if (terms.length > 0) {
