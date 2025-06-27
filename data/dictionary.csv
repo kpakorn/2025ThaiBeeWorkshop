@@ -1,21 +1,21 @@
 ﻿Terms,Type,Descriptions,Related_Figures
-anterior,anatomy-direction,ด้านหน้า,
-posterior,anatomy-direction,ด้านท้าย,
-median,anatomy-direction,ตรงกลาง,
-lateral,anatomy-direction,ด้านข้าง,
+anterior,anatomy-direction,ด้านหน้า,direction1.jpg
+posterior,anatomy-direction,ด้านท้าย,direction1.jpg
+median,anatomy-direction,ตรงกลาง,direction2.jpg
+lateral,anatomy-direction,ด้านข้าง,direction2.jpg
 marginal,anatomy-direction,ด้านขอบ บริเวณขอบ,
 margin,anatomy-direction,ขอบ,
-inner,anatomy-direction,ด้านใน (เมื่อเทียบกับแนวกลางตัว),
-outer,anatomy-direction,ด้านนอก (เมื่อเทียบกับแนวกลางตัว),
-apical,anatomy-direction,ด้านปลาย ส่วนปลาย,
-proximal,anatomy-direction,คือ apical (ด้านปลาย ส่วนปลาย),
-basal,anatomy-direction,ด้านฐาน,
-distal,anatomy-direction,คือ basal,
+inner,anatomy-direction,ด้านใน (เมื่อเทียบกับแนวกลางตัว),direction2.jpg
+outer,anatomy-direction,ด้านนอก (เมื่อเทียบกับแนวกลางตัว),direction2.jpg
+apical,anatomy-direction,ด้านปลาย ส่วนปลาย,direction3.jpg
+proximal,anatomy-direction,คือ apical (ด้านปลาย ส่วนปลาย),direction3.jpg
+basal,anatomy-direction,ด้านฐาน,direction3.jpg
+distal,anatomy-direction,คือ basal,direction3.jpg
 frontal,anatomy-direction,ด้านหน้าของส่วนหัว (ด้านที่ใบหน้าหัน),
 parallel,anatomy-direction,ขนานไปกับ,
 tangent,anatomy-direction,สัมผัสกับ,
-dorsal,anatomy-direction,ด้านหลัง,
-ventral,anatomy-direction,ด้านท้อง,
+dorsal,anatomy-direction,ด้านหลัง,direction1.jpg
+ventral,anatomy-direction,ด้านท้อง,direction1.jpg
 dense,anatomy-quantification,หนาแน่น (เรียงตัวอย่างหนาแน่น),
 sparse,anatomy-quantification,ประปราย (เรียงตัวอย่างประปราย),
 fine,anatomy-quantification,ละเอียด (ขนาด),
