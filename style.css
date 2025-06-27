@@ -42,7 +42,13 @@ h1 {
   background: #f5f5f5;
   padding: 1rem;
   box-sizing: border-box;
+
+  /* Make sidebar scrollable */
+  /* Adjust 250px to match your header/banner height */
+  height: calc(100vh - 250px);
+  overflow-y: auto;
 }
+
 
 #sidebar .term {
   padding: 0.5rem;
