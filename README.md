@@ -7,7 +7,7 @@ Long story short, we drew inspiration from the long-running U.S. Bee Course sinc
 The project will be structured and implemented by the Bee and Spider Research Unit, Department of Biology, Faculty of Science, Chulalongkorn University (Thailand).
 
 
-<b>Developed by</b> Pakorn Nalinrachatakan
+<b>Developed by:</b> Pakorn Nalinrachatakan
 
 <b>Content:</b> Pakorn Nalinrachatakan and Nontawat Chatthanabun
 
