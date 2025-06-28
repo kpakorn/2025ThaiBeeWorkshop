@@ -16,19 +16,19 @@ parallel,anatomy-direction,ขนานไปกับ,
 tangent,anatomy-direction,สัมผัสกับ,
 dorsal,anatomy-direction,ด้านหลัง,direction1.jpg
 ventral,anatomy-direction,ด้านท้อง,direction1.jpg
-dense,anatomy-quantification,หนาแน่น (เรียงตัวอย่างหนาแน่น),punctureQuant.jpg
-sparse,anatomy-quantification,ประปราย (เรียงตัวอย่างประปราย),punctureQuant.jpg
-fine,anatomy-quantification,ละเอียด (ขนาด),punctureQuant.jpg
-coarse,anatomy-quantification,หยาบ (ขนาด),punctureQuant.jpg
-compact,anatomy-quantification,แน่น กระจายตัวอย่างหนาแน่น,punctureQuant.jpg
-loose,anatomy-quantification,หลวม กระจายตัวอย่างหลวม,punctureQuant.jpg
-prominent,anatomy-quantification,โดดเด่น,punctureQuant.jpg
-minute,anatomy-quantification,เล็ก ขนาดเล็ก ด้อยลงไป,punctureQuant.jpg
-uniform,anatomy-quantification,เรียงตัวสม่ำเสมอ,punctureQuant.jpg
-clump,anatomy-quantification,เรียงตัวไม่สม่ำเสมอ โดยมีการเกาะกลุ่มกันชัดเจน,punctureQuant.jpg
-random,anatomy-quantification,เรียงตัวไม่สม่ำเสมอ โดยมีรูปแบบไม่แน่นอน,punctureQuant.jpg
-confuse,anatomy-quantification,แยกจากกันยาก รูปร่างไม่ชัดเจน ความหมายคล้าย irregular,punctureQuant.jpg
-irregular,anatomy-quantification,แยกจากกันยาก รูปร่างไม่ชัดเจน ความหมายคล้าย confuse,punctureQuant.jpg
+dense,anatomy-quantification-puncture,หนาแน่น (เรียงตัวอย่างหนาแน่น),punctureQuant.jpg
+sparse,anatomy-quantification-puncture,ประปราย (เรียงตัวอย่างประปราย),punctureQuant.jpg
+fine,anatomy-quantification-puncture,ละเอียด (ขนาด),punctureQuant.jpg
+coarse,anatomy-quantification-puncture,หยาบ (ขนาด),punctureQuant.jpg
+compact,anatomy-quantification-puncture,แน่น กระจายตัวอย่างหนาแน่น,punctureQuant.jpg
+loose,anatomy-quantification-puncture,หลวม กระจายตัวอย่างหลวม,punctureQuant.jpg
+prominent,anatomy-quantification-puncture,โดดเด่น,punctureQuant.jpg
+minute,anatomy-quantification-puncture,เล็ก ขนาดเล็ก ด้อยลงไป,punctureQuant.jpg
+uniform,anatomy-quantification-puncture,เรียงตัวสม่ำเสมอ,punctureQuant.jpg
+clump,anatomy-quantification-puncture,เรียงตัวไม่สม่ำเสมอ โดยมีการเกาะกลุ่มกันชัดเจน,punctureQuant.jpg
+random,anatomy-quantification-puncture,เรียงตัวไม่สม่ำเสมอ โดยมีรูปแบบไม่แน่นอน,punctureQuant.jpg
+confuse,anatomy-quantification-puncture,แยกจากกันยาก รูปร่างไม่ชัดเจน ความหมายคล้าย irregular,punctureQuant.jpg
+irregular,anatomy-quantification-puncture,แยกจากกันยาก รูปร่างไม่ชัดเจน ความหมายคล้าย confuse,punctureQuant.jpg
 attenuated,anatomy-quantification,จางลง บรรเทา,
 conspicuous,anatomy-quantification,เด่นชัด,
 augment,anatomy-quantification,การเสริม การเพิ่มพูน,
