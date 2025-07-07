@@ -1,141 +1,150 @@
-    min-height: 300px;
-    order: 3;
-    width: 100%;
-  }
-  
-  .card .image-container {
-    width: 40%;
-    min-width: 180px;
-    height: 250px;
-  }
-  
-  .card h2 {
-    font-size: 1.5rem;
-  }
-  
-  #card-container {
-    min-height: 350px;
-  }
+/* style.css */
+
+/* Reset default spacing */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Small mobile adjustments */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 0.75rem;
-  }
-  
-  .credits {
-    padding: 0 0.75rem;
-  }
-  
-  .credits p {
-    font-size: 0.7rem;
-  }
-  
-  .mobile-search {
-    padding: 0.625rem 0.875rem;
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  #sort-select {
-    padding: 0.625rem 0.875rem;
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  #sidebar {
-    padding: 1rem;
-  }
-  
-  #sidebar .term {
-    padding: 0.625rem 0.875rem;
-    font-size: 0.9rem;
-  }
-  
-  main {
-    width: 100%;
-  }
-  
-  #card-container {
-    width: 100%;
-    min-height: 250px;
-  }
-  
-  .card {
-    padding: 1.25rem;
-    min-height: 200px;
-    width: 100%;
-  }
-  
-  .card .image-container {
-    height: 150px;
-  }
-  
-  .card .placeholder-image {
-    font-size: 0.8rem;
-  }
-  
-  .card h2 {
-    font-size: 1.3rem;
-  }
-  
-  #search {
-    padding: 0.75rem 1rem;
-  }
+/* Header and banner */
+header {
+  text-align: center;
+  padding: 0;
 }
 
-/* Landscape mobile adjustments */
-@media (max-width: 768px) and (orientation: landscape) {
-  #sidebar {
-    max-height: 200px;
-  }
+/* Credits under the main title */
+.credits {
+  max-width: 1200px;
+  margin: 0.5rem auto 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .card img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
+.credits p {
+  margin: 0.2rem 0;
+  font-size: 0.75rem;       /* slightly smaller than your h1 */
+  color: #555;             /* soft gray for secondary info */
 }
 
-/* Print styles */
-@media print {
-  header {
-    box-shadow: none;
-    margin-bottom: 1rem;
-  }
-  
-  .container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  #sidebar {
-    display: none;
-  }
-  
-  .card {
-    box-shadow: none;
-    border: 1px solid #ccc;
-  }
+.credits strong {
+  font-weight: bold;
 }
 
-.mobile-search {
-  padding: 0.625rem 0.875rem;
-  font-size: 0.85rem;
-  margin-bottom: 0.75rem;
+/* Style for the Sort toggle */
+.sort-btn {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+.sort-btn.active {
+  background: #e0e0e0;
 }
 
-#sort-select {
-  padding: 0.625rem 0.875rem;
-  font-size: 0.85rem;
-  margin-bottom: 0.75rem;
+#site-banner {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 200px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
 }
 
+/* Page title */
+h1 {
+  margin: 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+/* Main layout: sidebar + content */
+.container {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+/* Sidebar styling */
 #sidebar {
+  width: 180px;
+  background: #f5f5f5;
   padding: 1rem;
+  box-sizing: border-box;
+
+  /* Make sidebar scrollable */
+  /* Adjust 250px to match your header/banner height */
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+
+#sidebar .term {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#sidebar .term:hover {
+  background: #e0e0e0;
+}
+
+#sidebar .active {
+  background: white;
+  font-weight: bold;
+}
+
+/* Content area */
+main {
+  flex: 1;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#search {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Term card */
+.card {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;   /* align content to the top instead of center */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  border-radius: 4px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #1a0dab;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
 
 /* Container for all figures in a card */
 .figures {
@@ -160,3 +169,25 @@
   border-radius: 4px;
   margin-top: 0.25rem;
 }
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  main {
+    order: 1;
+  }
+  #sidebar {
+    order: 2;
+    width: 100%;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card img {
+    width: 80%;
+    margin: 1rem auto 0;
+  }
+}
+
