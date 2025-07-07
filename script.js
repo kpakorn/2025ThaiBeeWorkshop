@@ -71,27 +71,39 @@ document.getElementById('search')
                .innerHTML = '<p>No results found.</p>';
   });
 
-// 5) showTerm unchanged...
+// 5) showterm
 function showTerm(termName) {
-  document.querySelectorAll('#sidebar .term')
-    .forEach(el => el.classList.toggle('active', el.textContent === termName));
+  // … existing highlight & lookup code …
 
   const rec = terms.find(r => r.Terms === termName);
   const c = document.getElementById('card-container');
   if (!rec) return c.innerHTML = '<p>Term not found.</p>';
 
+  // Start card
   let html = '<div class="card"><div>';
   html += `<h2>${rec.Terms}</h2>`;
-  if (rec.Type) html += `<p><strong>Type:</strong> ${rec.Type}</p>`;
+  if (rec.Type)         html += `<p><strong>Type:</strong> ${rec.Type}</p>`;
   if (rec.Descriptions) html += `<p>${rec.Descriptions}</p>`;
-  if (rec.Related_Figures) {
-    html += `<p><a href="images/${rec.Related_Figures}" target="_blank">View Figure</a></p>`;
+
+  // Handle multiple figures
+  const figs = rec.Related_Figures
+    ? rec.Related_Figures.split(',').map(f => f.trim()).filter(f => f)
+    : [];
+
+  if (figs.length) {
+    html += '<div class="figures">';
+    figs.forEach(f => {
+      html += `
+        <div class="figure">
+          <a href="images/${f}" target="_blank">View ${f.replace(/\.[^.]+$/, '')}</a>
+          <img src="images/${f}" alt="${rec.Terms} figure">
+        </div>
+      `;
+    });
+    html += '</div>';
   }
-  html += '</div>';
-  if (rec.Related_Figures) {
-    html += `<img src="images/${rec.Related_Figures}" alt="${rec.Terms} figure">`;
-  }
-  html += '</div>';
+
+  html += '</div></div>';  // close .card inner & outer
 
   c.innerHTML = html;
 }
