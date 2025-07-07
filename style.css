@@ -146,6 +146,30 @@ main {
   text-decoration: underline;
 }
 
+/* Container for all figures in a card */
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Each individual figure block */
+.figure {
+  flex: 1 1 40%;         /* adjust “40%” to control size */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* The thumbnails */
+.figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .container {
